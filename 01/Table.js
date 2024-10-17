@@ -6,11 +6,12 @@ import TableFooter from './TableFooter';
 class Table extends React.Component {
     render() {
         const {data} = this.props;
+        const total = data.map(e => {return e.quantity * e.price})
 
         return <table>
             <TableHeader/>
             <TableBody data={ data }/>
-            <TableFooter/>
+            <TableFooter total = { total }/>
         </table>
     }
 }
