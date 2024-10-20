@@ -10,6 +10,14 @@ class App extends React.Component {
     state = {
         cart: [],
     }
+
+    addProduct = () => {
+
+    }
+
+    removeProduct = () => {
+        
+    }
     
     render() {
         return (

@@ -1,7 +1,12 @@
 import React from 'react';
 
 function Product(props) {
-    return <h3>Product</h3>
+    const { item } = props
+    return <tr>
+        <th>{ item.name }</th>
+        <th>{ item.price } PLN</th>
+        <th>{ item.quantity }</th>
+    </tr>
 }
 
 export default Product;
