@@ -14,8 +14,8 @@ class App extends React.Component {
     render() {
         return (
             <section>
-                <Category />
-                <Cart />
+                <Category data = { data }/>
+                <Cart data = { this.state.cart }/>
             </section>
         )
     }
