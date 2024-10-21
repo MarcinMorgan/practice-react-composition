@@ -1,11 +1,16 @@
 import React from 'react';
 
 function Product(props) {
-    const { item, btnFunc, btnContent } = props
+    const { item, btnFunc, btnContent, index } = props
     console.log(props)
     
     const clickHandler = () => {
-        btnFunc(item)
+        if (btnContent.includes('Dodaj')) {
+            btnFunc(item);
+        }
+        else {
+            btnFunc(index);
+        }
     }
 
     return <tr>

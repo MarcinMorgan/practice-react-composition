@@ -3,11 +3,11 @@ import Product from './Product';
 
 function Cart(props) {
     const { data, btnFunc, btnContent } = props
-    const list = data.map(item => { 
-        const dataPack = { item, btnFunc, btnContent }
+    const list = data.map((item, index) => { 
+        const dataPack = { item, btnFunc, btnContent, index }
         return( <Product { ...dataPack }></Product> )
     })
-    
+
     return <h2>Cart
         <table>
             <tbody>

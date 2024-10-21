@@ -16,9 +16,14 @@ class App extends React.Component {
             cart: [...this.state.cart, newItem]
         })
     }
-
-    removeProduct = () => {
-        
+    
+    removeProduct = (index) => {
+        console.log(index)
+        const newList = [...this.state.cart.slice(0,index), ...this.state.cart.slice(index+1)]
+        this.setState( {
+            cart: [...newList]
+        }
+        )
     }
     
     render() {
