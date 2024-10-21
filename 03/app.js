@@ -22,8 +22,8 @@ class App extends React.Component {
     }
     
     render() {
-        const categoryProps = { data: data, btnFunc: this.addProduct, btnContent: "Dodaj do koszyka" }
-        const cartProps = { data: this.state.cart, btnFunc: this.removeProduct, btnContent: "Usuń z koszyka" }
+        const categoryProps = { data: data, btnFunc: this.addProduct, btnContent: 'Dodaj do koszyka' }
+        const cartProps = { data: this.state.cart, btnFunc: this.removeProduct, btnContent: 'Usuń z koszyka' }
         return (
             <section>
                 <Category { ...categoryProps }/>

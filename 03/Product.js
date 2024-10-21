@@ -2,6 +2,7 @@ import React from 'react';
 
 function Product(props) {
     const { item, btnFunc, btnContent } = props
+    console.log(props)
     
     const clickHandler = () => {
         btnFunc(item)
