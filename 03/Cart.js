@@ -2,11 +2,18 @@ import React from 'react';
 import Product from './Product';
 
 function Cart(props) {
-    const { data } = props
-    const list = data.map(item => <Product item = { item }></Product>)
+    const { data, btnFunc } = props
+    const list = data.map(item => { 
+        const dataPack = { item, btnFunc }
+        return( <Product { ...dataPack }></Product> )
+    })
     
     return <h2>Cart
-        { list }
+        <table>
+            <tbody>
+                { list }
+            </tbody>
+        </table>
     </h2>
 }
 

@@ -11,8 +11,10 @@ class App extends React.Component {
         cart: [],
     }
 
-    addProduct = () => {
-
+    addProduct = (newItem) => {
+        this.setState({
+            cart: [...this.state.cart, newItem]
+        })
     }
 
     removeProduct = () => {
@@ -20,10 +22,12 @@ class App extends React.Component {
     }
     
     render() {
+        const categoryProps = { data: data, btnFunc: this.addProduct, btnContent: "Dodaj do koszyka" }
+        const cartProps = { data: this.state.cart, btnFunc: this.removeProduct, btnContent: "Usuń z koszyka" }
         return (
             <section>
-                <Category data = { data }/>
-                <Cart data = { this.state.cart }/>
+                <Category { ...categoryProps }/>
+                <Cart { ...cartProps }/>
             </section>
         )
     }

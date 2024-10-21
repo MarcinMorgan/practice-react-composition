@@ -1,11 +1,16 @@
 import React from 'react';
 
 function Product(props) {
-    const { item } = props
+    const { item, btnFunc, btnContent } = props
+    
+    const clickHandler = () => {
+        btnFunc(item)
+    }
+
     return <tr>
         <th>{ item.name }</th>
         <th>{ item.price } PLN</th>
-        <th>{ item.quantity }</th>
+        <th><button onClick={ clickHandler }>{ btnContent }</button></th>
     </tr>
 }
 
